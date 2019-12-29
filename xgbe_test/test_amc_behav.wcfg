@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="test_amc_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="test_amc" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="80000000fs"></ZoomStartTime>
+      <ZoomEndTime time="113709570fs"></ZoomEndTime>
+      <Cursor1Time time="95317000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="198"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="31" />
+   <wvobject fp_name="/test_amc/eth_coreclk" type="logic">
+      <obj_property name="ElementShortName">eth_coreclk</obj_property>
+      <obj_property name="ObjectShortName">eth_coreclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_amc/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_amc/atime_counter" type="array">
+      <obj_property name="ElementShortName">atime_counter[15:0]</obj_property>
+      <obj_property name="ObjectShortName">atime_counter[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_amc/s0_addrs" type="array">
+      <obj_property name="ElementShortName">s0_addrs[255:0]</obj_property>
+      <obj_property name="ObjectShortName">s0_addrs[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_amc/s3_new_addr_valids" type="array">
+      <obj_property name="ElementShortName">s3_new_addr_valids[1:0]</obj_property>
+      <obj_property name="ObjectShortName">s3_new_addr_valids[1:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_amc/s3_new_addrs" type="array">
+      <obj_property name="ElementShortName">s3_new_addrs[255:0]</obj_property>
+      <obj_property name="ObjectShortName">s3_new_addrs[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_amc/s3_new_addr_atimes" type="array">
+      <obj_property name="ElementShortName">s3_new_addr_atimes[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s3_new_addr_atimes[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_amc/update_addr_i" type="array">
+      <obj_property name="ElementShortName">update_addr_i[255:0]</obj_property>
+      <obj_property name="ObjectShortName">update_addr_i[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_amc/update_valid_i" type="array">
+      <obj_property name="ElementShortName">update_valid_i[1:0]</obj_property>
+      <obj_property name="ObjectShortName">update_valid_i[1:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_amc/dut/state" type="array">
+      <obj_property name="ElementShortName">state[31:0]</obj_property>
+      <obj_property name="ObjectShortName">state[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_amc/dut/update_valid" type="array">
+      <obj_property name="ElementShortName">update_valid[0:1]</obj_property>
+      <obj_property name="ObjectShortName">update_valid[0:1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_amc/dut/update_ready" type="array">
+      <obj_property name="ElementShortName">update_ready[0:1]</obj_property>
+      <obj_property name="ObjectShortName">update_ready[0:1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_amc/dut/\genblk3[0].fifo_full " type="logic">
+      <obj_property name="ElementShortName">\genblk3[0].fifo_full </obj_property>
+      <obj_property name="ObjectShortName">\genblk3[0].fifo_full </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_amc/dut/\genblk3[0].fifo_empty " type="logic">
+      <obj_property name="ElementShortName">\genblk3[0].fifo_empty </obj_property>
+      <obj_property name="ObjectShortName">\genblk3[0].fifo_empty </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_amc/dut/\genblk3[1].fifo_full " type="logic">
+      <obj_property name="ElementShortName">\genblk3[1].fifo_full </obj_property>
+      <obj_property name="ObjectShortName">\genblk3[1].fifo_full </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_amc/dut/\genblk3[1].fifo_empty " type="logic">
+      <obj_property name="ElementShortName">\genblk3[1].fifo_empty </obj_property>
+      <obj_property name="ObjectShortName">\genblk3[1].fifo_empty </obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_amc/state" type="array">
+      <obj_property name="ElementShortName">state[31:0]</obj_property>
+      <obj_property name="ObjectShortName">state[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_amc/valid" type="logic">
+      <obj_property name="ElementShortName">valid</obj_property>
+      <obj_property name="ObjectShortName">valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_amc/ready" type="logic">
+      <obj_property name="ElementShortName">ready</obj_property>
+      <obj_property name="ObjectShortName">ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_amc/write_en" type="array">
+      <obj_property name="ElementShortName">write_en[139:0]</obj_property>
+      <obj_property name="ObjectShortName">write_en[139:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_amc/addr" type="array">
+      <obj_property name="ElementShortName">addr[127:0]</obj_property>
+      <obj_property name="ObjectShortName">addr[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_amc/hash_en" type="logic">
+      <obj_property name="ElementShortName">hash_en</obj_property>
+      <obj_property name="ObjectShortName">hash_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_amc/entry_valid_i" type="array">
+      <obj_property name="ElementShortName">entry_valid_i[3:0]</obj_property>
+      <obj_property name="ObjectShortName">entry_valid_i[3:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_amc/entry_tag_i" type="array">
+      <obj_property name="ElementShortName">entry_tag_i[511:0]</obj_property>
+      <obj_property name="ObjectShortName">entry_tag_i[511:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_amc/entry_value_i" type="array">
+      <obj_property name="ElementShortName">entry_value_i[511:0]</obj_property>
+      <obj_property name="ObjectShortName">entry_value_i[511:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_amc/entry_atime_i" type="array">
+      <obj_property name="ElementShortName">entry_atime_i[63:0]</obj_property>
+      <obj_property name="ObjectShortName">entry_atime_i[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_amc/entry_valid_o" type="array">
+      <obj_property name="ElementShortName">entry_valid_o[3:0]</obj_property>
+      <obj_property name="ObjectShortName">entry_valid_o[3:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_amc/entry_tag_o" type="array">
+      <obj_property name="ElementShortName">entry_tag_o[511:0]</obj_property>
+      <obj_property name="ObjectShortName">entry_tag_o[511:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_amc/entry_value_o" type="array">
+      <obj_property name="ElementShortName">entry_value_o[511:0]</obj_property>
+      <obj_property name="ObjectShortName">entry_value_o[511:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_amc/entry_atime_o" type="array">
+      <obj_property name="ElementShortName">entry_atime_o[63:0]</obj_property>
+      <obj_property name="ObjectShortName">entry_atime_o[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_amc/entry_match_o" type="array">
+      <obj_property name="ElementShortName">entry_match_o[3:0]</obj_property>
+      <obj_property name="ObjectShortName">entry_match_o[3:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+</wave_config>

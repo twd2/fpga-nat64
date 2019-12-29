@@ -1,0 +1,17 @@
+#!/bin/bash
+
+sudo ip addr add 10.1.$2.3/24 dev $1
+sudo ip addr add 2000:0:0:$2::3/64 dev $1
+sudo ip link set $1 up
+sudo ip route add 100.64.0.0/16 via 10.1.$2.1 dev $1
+sudo ip route add 10.0.0.0/24 via 10.1.$2.1 dev $1
+sudo ip route add 10.1.1.0/24 via 10.1.$2.1 dev $1
+sudo ip route add 10.1.2.0/24 via 10.1.$2.1 dev $1
+sudo ip route add 10.1.3.0/24 via 10.1.$2.1 dev $1
+sudo ip route add 10.1.4.0/24 via 10.1.$2.1 dev $1
+sudo ip route add 10.1.5.0/24 via 10.1.$2.1 dev $1
+sudo ip route add 2000:0:0:1::/64 via 2000:0:0:$2::1 dev $1
+sudo ip route add 2000:0:0:2::/64 via 2000:0:0:$2::1 dev $1
+sudo ip route add 2000:0:0:3::/64 via 2000:0:0:$2::1 dev $1
+sudo ip route add 2000:0:0:4::/64 via 2000:0:0:$2::1 dev $1
+sudo ip route add 2000:0:0:5::/64 via 2000:0:0:$2::1 dev $1

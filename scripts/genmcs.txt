@@ -1,0 +1,1 @@
+write_cfgmem  -format mcs -size 32 -interface SPIx4 -loadbit {up 0x00000000 "G:/Program/cpld_fpga/fpga-nat64/xgbe_test/xgbe_test.runs/impl_1/xgbe_test.bit" } -checksum -force -disablebitswap -file "C:/Users/twd2/Desktop/fpga-nat64.mcs"

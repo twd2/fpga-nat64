@@ -1,0 +1,983 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Nov  8 23:45:22 2019" VIVADOVERSION="2019.1">
+
+  <SYSTEMINFO ARCH="kintex7" DEVICE="7k420ti" NAME="bd_efdb_0" PACKAGE="ffg901" SPEEDGRADE="-2L"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="I" NAME="tx_axis_aresetn" SIGIS="rst" SIGNAME="External_Ports_tx_axis_aresetn">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xmac" PORT="tx_axis_aresetn"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="rx_axis_aresetn" SIGIS="rst" SIGNAME="External_Ports_rx_axis_aresetn">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xmac" PORT="rx_axis_aresetn"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="7" NAME="tx_ifg_delay" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_tx_ifg_delay">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xmac" PORT="tx_ifg_delay"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="dclk" SIGIS="clk" SIGNAME="External_Ports_dclk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="dclk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="txp" SIGIS="undef" SIGNAME="xpcs_txp">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="txp"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="txn" SIGIS="undef" SIGNAME="xpcs_txn">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="txn"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="rxp" SIGIS="undef" SIGNAME="External_Ports_rxp">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="rxp"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="rxn" SIGIS="undef" SIGNAME="External_Ports_rxn">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="rxn"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="signal_detect" SIGIS="undef" SIGNAME="External_Ports_signal_detect">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="signal_detect"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="tx_fault" SIGIS="undef" SIGNAME="External_Ports_tx_fault">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="tx_fault"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="tx_disable" SIGIS="undef" SIGNAME="xpcs_tx_disable">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="tx_disable"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="7" NAME="pcspma_status" RIGHT="0" SIGIS="undef" SIGNAME="xpcs_core_status">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="core_status"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="sim_speedup_control" SIGIS="undef" SIGNAME="External_Ports_sim_speedup_control">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="sim_speedup_control"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="322265625" DIR="O" NAME="rxrecclk_out" SIGIS="clk" SIGNAME="xpcs_rxrecclk_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="rxrecclk_out"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="79" NAME="mac_tx_configuration_vector" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_mac_tx_configuration_vector">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xmac" PORT="tx_configuration_vector"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="79" NAME="mac_rx_configuration_vector" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_mac_rx_configuration_vector">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xmac" PORT="rx_configuration_vector"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="2" NAME="mac_status_vector" RIGHT="0" SIGIS="undef" SIGNAME="xmac_status_vector">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xmac" PORT="status_vector"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="535" NAME="pcs_pma_configuration_vector" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_pcs_pma_configuration_vector">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="configuration_vector"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="447" NAME="pcs_pma_status_vector" RIGHT="0" SIGIS="undef" SIGNAME="xpcs_status_vector">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="status_vector"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="areset_coreclk" SIGIS="rst" SIGNAME="External_Ports_areset_coreclk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="areset_coreclk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="322265625" DIR="I" NAME="txusrclk" SIGIS="clk" SIGNAME="External_Ports_txusrclk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="txusrclk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="322265625" DIR="I" NAME="txusrclk2" SIGIS="clk" SIGNAME="External_Ports_txusrclk2">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="txusrclk2"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="322265625" DIR="O" NAME="txoutclk" SIGIS="clk" SIGNAME="xpcs_txoutclk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="txoutclk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="txuserrdy" SIGIS="undef" SIGNAME="External_Ports_txuserrdy">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="txuserrdy"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="tx_resetdone" SIGIS="undef" SIGNAME="xpcs_tx_resetdone">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="tx_resetdone"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="rx_resetdone" SIGIS="undef" SIGNAME="xpcs_rx_resetdone">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="rx_resetdone"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="156250000" DIR="I" NAME="coreclk" SIGIS="clk" SIGNAME="External_Ports_coreclk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="coreclk"/>
+        <CONNECTION INSTANCE="xmac" PORT="tx_clk0"/>
+        <CONNECTION INSTANCE="xmac" PORT="rx_clk0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="areset" SIGIS="rst" SIGNAME="External_Ports_areset">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="areset"/>
+        <CONNECTION INSTANCE="xmac" PORT="reset"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="gttxreset" SIGIS="rst" SIGNAME="External_Ports_gttxreset">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="gttxreset"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="gtrxreset" SIGIS="rst" SIGNAME="External_Ports_gtrxreset">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="gtrxreset"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="qplllock" SIGIS="undef" SIGNAME="External_Ports_qplllock">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="qplllock"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="qplloutclk" SIGIS="clk" SIGNAME="External_Ports_qplloutclk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="qplloutclk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="156250000" DIR="I" NAME="qplloutrefclk" SIGIS="clk" SIGNAME="External_Ports_qplloutrefclk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="qplloutrefclk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="reset_counter_done" SIGIS="undef" SIGNAME="External_Ports_reset_counter_done">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="reset_counter_done"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="63" NAME="s_axis_tx_tdata" RIGHT="0" SIGIS="undef" SIGNAME="xmac_tx_axis_tdata">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xmac" PORT="tx_axis_tdata"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="7" NAME="s_axis_tx_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="xmac_tx_axis_tkeep">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xmac" PORT="tx_axis_tkeep"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="s_axis_tx_tlast" SIGIS="undef" SIGNAME="xmac_tx_axis_tlast">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xmac" PORT="tx_axis_tlast"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="s_axis_tx_tready" SIGIS="undef" SIGNAME="xmac_tx_axis_tready">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xmac" PORT="tx_axis_tready"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="0" NAME="s_axis_tx_tuser" RIGHT="0" SIGIS="undef" SIGNAME="xmac_tx_axis_tuser">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xmac" PORT="tx_axis_tuser"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="s_axis_tx_tvalid" SIGIS="undef" SIGNAME="xmac_tx_axis_tvalid">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xmac" PORT="tx_axis_tvalid"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="63" NAME="m_axis_rx_tdata" RIGHT="0" SIGIS="undef" SIGNAME="xmac_rx_axis_tdata">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xmac" PORT="rx_axis_tdata"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="7" NAME="m_axis_rx_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="xmac_rx_axis_tkeep">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xmac" PORT="rx_axis_tkeep"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="m_axis_rx_tlast" SIGIS="undef" SIGNAME="xmac_rx_axis_tlast">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xmac" PORT="rx_axis_tlast"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="m_axis_rx_tuser" SIGIS="undef" SIGNAME="xmac_rx_axis_tuser">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xmac" PORT="rx_axis_tuser"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="m_axis_rx_tvalid" SIGIS="undef" SIGNAME="xmac_rx_axis_tvalid">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xmac" PORT="rx_axis_tvalid"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="tx_statistics_valid" SIGIS="undef" SIGNAME="xmac_tx_statistics_valid">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xmac" PORT="tx_statistics_valid"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="25" NAME="tx_statistics_vector" RIGHT="0" SIGIS="undef" SIGNAME="xmac_tx_statistics_vector">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xmac" PORT="tx_statistics_vector"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="rx_statistics_valid" SIGIS="undef" SIGNAME="xmac_rx_statistics_valid">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xmac" PORT="rx_statistics_valid"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="29" NAME="rx_statistics_vector" RIGHT="0" SIGIS="undef" SIGNAME="xmac_rx_statistics_vector">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xmac" PORT="rx_statistics_vector"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="15" NAME="s_axis_pause_tdata" RIGHT="0" SIGIS="undef" SIGNAME="xmac_pause_val">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xmac" PORT="pause_val"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="s_axis_pause_tvalid" SIGIS="undef" SIGNAME="xmac_pause_req">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xmac" PORT="pause_req"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES>
+    <BUSINTERFACE BUSNAME="External_Interface_s_axis_tx" NAME="s_axis_tx" TYPE="TARGET">
+      <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="8"/>
+      <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+      <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+      <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+      <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+      <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+      <PARAMETER NAME="FREQ_HZ" VALUE="156250000"/>
+      <PARAMETER NAME="PHASE" VALUE="0.000"/>
+      <PARAMETER NAME="CLK_DOMAIN" VALUE="bd_efdb_0_coreclk"/>
+      <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+      <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+      <PORTMAPS>
+        <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_tx_tdata"/>
+        <PORTMAP LOGICAL="TKEEP" PHYSICAL="s_axis_tx_tkeep"/>
+        <PORTMAP LOGICAL="TLAST" PHYSICAL="s_axis_tx_tlast"/>
+        <PORTMAP LOGICAL="TREADY" PHYSICAL="s_axis_tx_tready"/>
+        <PORTMAP LOGICAL="TUSER" PHYSICAL="s_axis_tx_tuser"/>
+        <PORTMAP LOGICAL="TVALID" PHYSICAL="s_axis_tx_tvalid"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+    <BUSINTERFACE BUSNAME="xmac_m_axis_rx" NAME="m_axis_rx" TYPE="INITIATOR">
+      <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="8"/>
+      <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+      <PARAMETER NAME="HAS_TREADY" VALUE="0"/>
+      <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+      <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+      <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+      <PARAMETER NAME="FREQ_HZ" VALUE="156250000"/>
+      <PARAMETER NAME="PHASE" VALUE="0.000"/>
+      <PARAMETER NAME="CLK_DOMAIN" VALUE="bd_efdb_0_coreclk"/>
+      <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+      <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+      <PORTMAPS>
+        <PORTMAP LOGICAL="TDATA" PHYSICAL="m_axis_rx_tdata"/>
+        <PORTMAP LOGICAL="TKEEP" PHYSICAL="m_axis_rx_tkeep"/>
+        <PORTMAP LOGICAL="TLAST" PHYSICAL="m_axis_rx_tlast"/>
+        <PORTMAP LOGICAL="TUSER" PHYSICAL="m_axis_rx_tuser"/>
+        <PORTMAP LOGICAL="TVALID" PHYSICAL="m_axis_rx_tvalid"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+    <BUSINTERFACE BUSNAME="External_Interface_s_axis_pause" NAME="s_axis_pause" TYPE="TARGET">
+      <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
+      <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="HAS_TREADY" VALUE="0"/>
+      <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+      <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+      <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+      <PARAMETER NAME="FREQ_HZ" VALUE="156250000"/>
+      <PARAMETER NAME="PHASE" VALUE="0.000"/>
+      <PARAMETER NAME="CLK_DOMAIN" VALUE="bd_efdb_0_coreclk"/>
+      <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+      <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+      <PORTMAPS>
+        <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_pause_tdata"/>
+        <PORTMAP LOGICAL="TVALID" PHYSICAL="s_axis_pause_tvalid"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+    <BUSINTERFACE BUSNAME="xmac_tx_statistics" NAME="tx_statistics" TYPE="INITIATOR">
+      <PORTMAPS>
+        <PORTMAP LOGICAL="valid" PHYSICAL="tx_statistics_valid"/>
+        <PORTMAP LOGICAL="vector" PHYSICAL="tx_statistics_vector"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+    <BUSINTERFACE BUSNAME="xmac_rx_statistics" NAME="rx_statistics" TYPE="INITIATOR">
+      <PORTMAPS>
+        <PORTMAP LOGICAL="valid" PHYSICAL="rx_statistics_valid"/>
+        <PORTMAP LOGICAL="vector" PHYSICAL="rx_statistics_vector"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+  </EXTERNALINTERFACES>
+
+  <MODULES>
+    <MODULE COREREVISION="6" FULLNAME="/dcm_locked_driver" HWVERSION="1.1" INSTANCE="dcm_locked_driver" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x1"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_efdb_0_dcm_locked_driver_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="dcm_locked_driver_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xmac" PORT="tx_dcm_locked"/>
+            <CONNECTION INSTANCE="xmac" PORT="rx_dcm_locked"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="6" FULLNAME="/pma_pmd_type_driver" HWVERSION="1.1" INSTANCE="pma_pmd_type_driver" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="3"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x5"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_efdb_0_pma_pmd_type_driver_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="2" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="pma_pmd_type_driver_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xpcs" PORT="pma_pmd_type"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="7" FULLNAME="/xmac" HWVERSION="15.1" INSTANCE="xmac" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ten_gig_eth_mac" VLNV="xilinx.com:ip:ten_gig_eth_mac:15.1">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=ten_gig_eth_mac;v=v15_1;d=pg072-ten-gig-eth-mac.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="c_family" VALUE="kintex7"/>
+        <PARAMETER NAME="c_component_name" VALUE="bd_efdb_0_xmac_0"/>
+        <PARAMETER NAME="c_has_stats" VALUE="false"/>
+        <PARAMETER NAME="c_has_xgmii" VALUE="false"/>
+        <PARAMETER NAME="c_has_management" VALUE="false"/>
+        <PARAMETER NAME="c_has_wan_support" VALUE="false"/>
+        <PARAMETER NAME="c_1588" VALUE="0"/>
+        <PARAMETER NAME="c_pfc" VALUE="false"/>
+        <PARAMETER NAME="c_tx_tuser_width" VALUE="1"/>
+        <PARAMETER NAME="c_tx_stats_width" VALUE="25"/>
+        <PARAMETER NAME="c_rx_stats_width" VALUE="29"/>
+        <PARAMETER NAME="c_rx_vec_width" VALUE="79"/>
+        <PARAMETER NAME="c_tx_vec_width" VALUE="79"/>
+        <PARAMETER NAME="c_xgmii_data_width" VALUE="63"/>
+        <PARAMETER NAME="c_xgmii_cntl_width" VALUE="7"/>
+        <PARAMETER NAME="c_32bit" VALUE="false"/>
+        <PARAMETER NAME="c_user_data_width" VALUE="63"/>
+        <PARAMETER NAME="c_user_cntl_width" VALUE="7"/>
+        <PARAMETER NAME="c_core_speed" VALUE="10"/>
+        <PARAMETER NAME="c_axilite_freq" VALUE="200.00"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_efdb_0_xmac_0"/>
+        <PARAMETER NAME="Management_Interface" VALUE="false"/>
+        <PARAMETER NAME="Management_Frequency" VALUE="200.00"/>
+        <PARAMETER NAME="Statistics_Gathering" VALUE="false"/>
+        <PARAMETER NAME="Physical_Interface" VALUE="Internal"/>
+        <PARAMETER NAME="WAN_Support" VALUE="false"/>
+        <PARAMETER NAME="Data_Rate" VALUE="10Gbps"/>
+        <PARAMETER NAME="gt_type" VALUE="GTHE3"/>
+        <PARAMETER NAME="IEEE_1588" VALUE="None"/>
+        <PARAMETER NAME="Timer_Format" VALUE="Time_of_day"/>
+        <PARAMETER NAME="SupportLevel" VALUE="0"/>
+        <PARAMETER NAME="Enable_Priority_Flow_Control" VALUE="false"/>
+        <PARAMETER NAME="Low_Latency_32_bit_MAC" VALUE="64bit"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="156250000" DIR="I" NAME="tx_clk0" SIGIS="clk" SIGNAME="External_Ports_coreclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="coreclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset" SIGIS="rst" SIGNAME="External_Ports_areset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="areset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="tx_axis_aresetn" SIGIS="rst" SIGNAME="External_Ports_tx_axis_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="tx_axis_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="tx_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="xmac_tx_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_efdb_0_imp" PORT="s_axis_tx_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="tx_axis_tvalid" SIGIS="undef" SIGNAME="xmac_tx_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_efdb_0_imp" PORT="s_axis_tx_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="tx_axis_tlast" SIGIS="undef" SIGNAME="xmac_tx_axis_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_efdb_0_imp" PORT="s_axis_tx_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="tx_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="xmac_tx_axis_tuser">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_efdb_0_imp" PORT="s_axis_tx_tuser"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="tx_ifg_delay" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_tx_ifg_delay">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="tx_ifg_delay"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="tx_axis_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="xmac_tx_axis_tkeep">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_efdb_0_imp" PORT="s_axis_tx_tkeep"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="tx_axis_tready" SIGIS="undef" SIGNAME="xmac_tx_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_efdb_0_imp" PORT="s_axis_tx_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="25" NAME="tx_statistics_vector" RIGHT="0" SIGIS="undef" SIGNAME="xmac_tx_statistics_vector">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_efdb_0_imp" PORT="tx_statistics_vector"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="tx_statistics_valid" SIGIS="undef" SIGNAME="xmac_tx_statistics_valid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_efdb_0_imp" PORT="tx_statistics_valid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rx_axis_aresetn" SIGIS="rst" SIGNAME="External_Ports_rx_axis_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rx_axis_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="rx_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="xmac_rx_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_efdb_0_imp" PORT="m_axis_rx_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="rx_axis_tvalid" SIGIS="undef" SIGNAME="xmac_rx_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_efdb_0_imp" PORT="m_axis_rx_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="rx_axis_tuser" SIGIS="undef" SIGNAME="xmac_rx_axis_tuser">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_efdb_0_imp" PORT="m_axis_rx_tuser"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="rx_axis_tlast" SIGIS="undef" SIGNAME="xmac_rx_axis_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_efdb_0_imp" PORT="m_axis_rx_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="rx_axis_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="xmac_rx_axis_tkeep">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_efdb_0_imp" PORT="m_axis_rx_tkeep"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="29" NAME="rx_statistics_vector" RIGHT="0" SIGIS="undef" SIGNAME="xmac_rx_statistics_vector">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_efdb_0_imp" PORT="rx_statistics_vector"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="rx_statistics_valid" SIGIS="undef" SIGNAME="xmac_rx_statistics_valid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_efdb_0_imp" PORT="rx_statistics_valid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="pause_val" RIGHT="0" SIGIS="undef" SIGNAME="xmac_pause_val">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_efdb_0_imp" PORT="s_axis_pause_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pause_req" SIGIS="undef" SIGNAME="xmac_pause_req">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_efdb_0_imp" PORT="s_axis_pause_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="79" NAME="tx_configuration_vector" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_mac_tx_configuration_vector">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mac_tx_configuration_vector"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="79" NAME="rx_configuration_vector" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_mac_rx_configuration_vector">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mac_rx_configuration_vector"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="status_vector" RIGHT="0" SIGIS="undef" SIGNAME="xmac_status_vector">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mac_status_vector"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="tx_dcm_locked" SIGIS="undef" SIGNAME="dcm_locked_driver_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dcm_locked_driver" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="xgmii_txd" RIGHT="0" SIGIS="undef" SIGNAME="xmac_xgmii_txd">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xpcs" PORT="xgmii_txd"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="xgmii_txc" RIGHT="0" SIGIS="undef" SIGNAME="xmac_xgmii_txc">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xpcs" PORT="xgmii_txc"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="156250000" DIR="I" NAME="rx_clk0" SIGIS="clk" SIGNAME="External_Ports_coreclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="coreclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rx_dcm_locked" SIGIS="undef" SIGNAME="dcm_locked_driver_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dcm_locked_driver" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="xgmii_rxd" RIGHT="0" SIGIS="undef" SIGNAME="xmac_xgmii_rxd">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xpcs" PORT="xgmii_rxd"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="xgmii_rxc" RIGHT="0" SIGIS="undef" SIGNAME="xmac_xgmii_rxc">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xpcs" PORT="xgmii_rxc"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="xmac_m_axis_rx" NAME="m_axis_rx" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="8"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="0"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="156250000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="bd_efdb_0_coreclk"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="rx_axis_tdata"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="rx_axis_tkeep"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="rx_axis_tlast"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="rx_axis_tuser"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="rx_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="External_Interface_s_axis_tx" NAME="s_axis_tx" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="8"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="156250000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="bd_efdb_0_coreclk"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="tx_axis_tdata"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="tx_axis_tkeep"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="tx_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="tx_axis_tready"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="tx_axis_tuser"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="tx_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="xmac_xgmii_xgmac" NAME="xgmii_xgmac" TYPE="INITIATOR" VLNV="xilinx.com:interface:xgmii:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="RXC" PHYSICAL="xgmii_rxc"/>
+            <PORTMAP LOGICAL="RXD" PHYSICAL="xgmii_rxd"/>
+            <PORTMAP LOGICAL="TXC" PHYSICAL="xgmii_txc"/>
+            <PORTMAP LOGICAL="TXD" PHYSICAL="xgmii_txd"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="External_Interface_s_axis_pause" NAME="s_axis_pause" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="0"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="156250000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="bd_efdb_0_coreclk"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="pause_val"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="pause_req"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="xmac_tx_statistics" NAME="tx_statistics" TYPE="INITIATOR" VLNV="xilinx.com:display_ten_gig_eth_mac:statistics:2.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="valid" PHYSICAL="tx_statistics_valid"/>
+            <PORTMAP LOGICAL="vector" PHYSICAL="tx_statistics_vector"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="xmac_rx_statistics" NAME="rx_statistics" TYPE="INITIATOR" VLNV="xilinx.com:display_ten_gig_eth_mac:statistics:2.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="valid" PHYSICAL="rx_statistics_valid"/>
+            <PORTMAP LOGICAL="vector" PHYSICAL="rx_statistics_vector"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="15" FULLNAME="/xpcs" HWVERSION="6.0" INSTANCE="xpcs" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ten_gig_eth_pcs_pma" VLNV="xilinx.com:ip:ten_gig_eth_pcs_pma:6.0">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=ten_gig_eth_pcs_pma;v=v6_0;d=pg068-ten-gig-eth-pcs-pma.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="c_family" VALUE="kintex7"/>
+        <PARAMETER NAME="c_component_name" VALUE="bd_efdb_0_xpcs_0"/>
+        <PARAMETER NAME="c_has_mdio" VALUE="false"/>
+        <PARAMETER NAME="c_has_fec" VALUE="false"/>
+        <PARAMETER NAME="c_has_an" VALUE="false"/>
+        <PARAMETER NAME="c_is_kr" VALUE="false"/>
+        <PARAMETER NAME="c_is_32bit" VALUE="false"/>
+        <PARAMETER NAME="c_no_ebuff" VALUE="false"/>
+        <PARAMETER NAME="c_gttype" VALUE="0"/>
+        <PARAMETER NAME="c_1588" VALUE="0"/>
+        <PARAMETER NAME="c_gtif_width" VALUE="32"/>
+        <PARAMETER NAME="c_speed10_25" VALUE="10"/>
+        <PARAMETER NAME="c_sub_core_name" VALUE="bd_efdb_0_xpcs_0_gt"/>
+        <PARAMETER NAME="c_gt_loc" VALUE="X0Y0"/>
+        <PARAMETER NAME="c_refclk" VALUE="clk0"/>
+        <PARAMETER NAME="c_refclkrate" VALUE="156"/>
+        <PARAMETER NAME="c_dclkrate" VALUE="100.00"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_efdb_0_xpcs_0"/>
+        <PARAMETER NAME="MDIO_Management" VALUE="false"/>
+        <PARAMETER NAME="base_kr" VALUE="BASE-R"/>
+        <PARAMETER NAME="baser32" VALUE="64bit"/>
+        <PARAMETER NAME="vu_gt_type" VALUE="GTH"/>
+        <PARAMETER NAME="speed10_25" VALUE="10Gig"/>
+        <PARAMETER NAME="autonegotiation" VALUE="false"/>
+        <PARAMETER NAME="fec" VALUE="false"/>
+        <PARAMETER NAME="no_ebuff" VALUE="false"/>
+        <PARAMETER NAME="IEEE_1588" VALUE="None"/>
+        <PARAMETER NAME="Timer_Format" VALUE="Time_of_day"/>
+        <PARAMETER NAME="SupportLevel" VALUE="0"/>
+        <PARAMETER NAME="TransceiverInExample" VALUE="false"/>
+        <PARAMETER NAME="TransceiverControl" VALUE="false"/>
+        <PARAMETER NAME="Locations" VALUE="X0Y0"/>
+        <PARAMETER NAME="RefClkRate" VALUE="156.25"/>
+        <PARAMETER NAME="RefClk" VALUE="clk0"/>
+        <PARAMETER NAME="DClkRate" VALUE="100.00"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="322265625" DIR="O" NAME="rxrecclk_out" SIGIS="clk" SIGNAME="xpcs_rxrecclk_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rxrecclk_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="156250000" DIR="I" NAME="coreclk" SIGIS="clk" SIGNAME="External_Ports_coreclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="coreclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="dclk" SIGIS="clk" SIGNAME="External_Ports_dclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="dclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="322265625" DIR="I" NAME="txusrclk" SIGIS="clk" SIGNAME="External_Ports_txusrclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="txusrclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="322265625" DIR="I" NAME="txusrclk2" SIGIS="clk" SIGNAME="External_Ports_txusrclk2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="txusrclk2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="areset" SIGIS="rst" SIGNAME="External_Ports_areset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="areset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="322265625" DIR="O" NAME="txoutclk" SIGIS="clk" SIGNAME="xpcs_txoutclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="txoutclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="areset_coreclk" SIGIS="rst" SIGNAME="External_Ports_areset_coreclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="areset_coreclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="gttxreset" SIGIS="rst" SIGNAME="External_Ports_gttxreset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="gttxreset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="gtrxreset" SIGIS="rst" SIGNAME="External_Ports_gtrxreset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="gtrxreset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="txuserrdy" SIGIS="undef" SIGNAME="External_Ports_txuserrdy">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="txuserrdy"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="qplllock" SIGIS="undef" SIGNAME="External_Ports_qplllock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="qplllock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="qplloutclk" SIGIS="clk" SIGNAME="External_Ports_qplloutclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="qplloutclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="156250000" DIR="I" NAME="qplloutrefclk" SIGIS="clk" SIGNAME="External_Ports_qplloutrefclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="qplloutrefclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset_counter_done" SIGIS="undef" SIGNAME="External_Ports_reset_counter_done">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset_counter_done"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="txp" SIGIS="undef" SIGNAME="xpcs_txp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="txp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="txn" SIGIS="undef" SIGNAME="xpcs_txn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="txn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rxp" SIGIS="undef" SIGNAME="External_Ports_rxp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rxp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rxn" SIGIS="undef" SIGNAME="External_Ports_rxn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rxn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sim_speedup_control" SIGIS="undef" SIGNAME="External_Ports_sim_speedup_control">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sim_speedup_control"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="xgmii_txd" RIGHT="0" SIGIS="undef" SIGNAME="xmac_xgmii_txd">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xmac" PORT="xgmii_txd"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="xgmii_txc" RIGHT="0" SIGIS="undef" SIGNAME="xmac_xgmii_txc">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xmac" PORT="xgmii_txc"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="xgmii_rxd" RIGHT="0" SIGIS="undef" SIGNAME="xmac_xgmii_rxd">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xmac" PORT="xgmii_rxd"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="xgmii_rxc" RIGHT="0" SIGIS="undef" SIGNAME="xmac_xgmii_rxc">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xmac" PORT="xgmii_rxc"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="535" NAME="configuration_vector" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_pcs_pma_configuration_vector">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pcs_pma_configuration_vector"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="447" NAME="status_vector" RIGHT="0" SIGIS="undef" SIGNAME="xpcs_status_vector">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pcs_pma_status_vector"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="core_status" RIGHT="0" SIGIS="undef" SIGNAME="xpcs_core_status">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pcspma_status"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="tx_resetdone" SIGIS="undef" SIGNAME="xpcs_tx_resetdone">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="tx_resetdone"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="rx_resetdone" SIGIS="undef" SIGNAME="xpcs_rx_resetdone">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rx_resetdone"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="signal_detect" SIGIS="undef" SIGNAME="External_Ports_signal_detect">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="signal_detect"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="tx_fault" SIGIS="undef" SIGNAME="External_Ports_tx_fault">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="tx_fault"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="drp_req" SIGIS="undef" SIGNAME="xpcs_drp_req">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xpcs" PORT="drp_gnt"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="drp_gnt" SIGIS="undef" SIGNAME="xpcs_drp_req">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xpcs" PORT="drp_req"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="drp_den_o" SIGIS="undef" SIGNAME="xpcs_drp_den_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xpcs" PORT="drp_den_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="drp_dwe_o" SIGIS="undef" SIGNAME="xpcs_drp_dwe_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xpcs" PORT="drp_dwe_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="drp_daddr_o" RIGHT="0" SIGIS="undef" SIGNAME="xpcs_drp_daddr_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xpcs" PORT="drp_daddr_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="drp_di_o" RIGHT="0" SIGIS="undef" SIGNAME="xpcs_drp_di_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xpcs" PORT="drp_di_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="drp_drdy_o" SIGIS="undef" SIGNAME="xpcs_drp_drdy_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xpcs" PORT="drp_drdy_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="drp_drpdo_o" RIGHT="0" SIGIS="undef" SIGNAME="xpcs_drp_drpdo_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xpcs" PORT="drp_drpdo_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="drp_den_i" SIGIS="undef" SIGNAME="xpcs_drp_den_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xpcs" PORT="drp_den_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="drp_dwe_i" SIGIS="undef" SIGNAME="xpcs_drp_dwe_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xpcs" PORT="drp_dwe_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="drp_daddr_i" RIGHT="0" SIGIS="undef" SIGNAME="xpcs_drp_daddr_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xpcs" PORT="drp_daddr_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="drp_di_i" RIGHT="0" SIGIS="undef" SIGNAME="xpcs_drp_di_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xpcs" PORT="drp_di_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="drp_drdy_i" SIGIS="undef" SIGNAME="xpcs_drp_drdy_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xpcs" PORT="drp_drdy_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="drp_drpdo_i" RIGHT="0" SIGIS="undef" SIGNAME="xpcs_drp_drpdo_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xpcs" PORT="drp_drpdo_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="tx_disable" SIGIS="undef" SIGNAME="xpcs_tx_disable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="tx_disable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="pma_pmd_type" RIGHT="0" SIGIS="undef" SIGNAME="pma_pmd_type_driver_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pma_pmd_type_driver" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="xmac_xgmii_xgmac" NAME="xgmii_interface" TYPE="TARGET" VLNV="xilinx.com:interface:xgmii:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="RXC" PHYSICAL="xgmii_rxc"/>
+            <PORTMAP LOGICAL="RXD" PHYSICAL="xgmii_rxd"/>
+            <PORTMAP LOGICAL="TXC" PHYSICAL="xgmii_txc"/>
+            <PORTMAP LOGICAL="TXD" PHYSICAL="xgmii_txd"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="xpcs_core_gt_drp_interface" NAME="core_gt_drp_interface" TYPE="INITIATOR" VLNV="xilinx.com:interface:drp:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="DADDR" PHYSICAL="drp_daddr_o"/>
+            <PORTMAP LOGICAL="DEN" PHYSICAL="drp_den_o"/>
+            <PORTMAP LOGICAL="DI" PHYSICAL="drp_di_o"/>
+            <PORTMAP LOGICAL="DO" PHYSICAL="drp_drpdo_i"/>
+            <PORTMAP LOGICAL="DRDY" PHYSICAL="drp_drdy_i"/>
+            <PORTMAP LOGICAL="DWE" PHYSICAL="drp_dwe_o"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="xpcs_core_gt_drp_interface" NAME="user_gt_drp_interface" TYPE="TARGET" VLNV="xilinx.com:interface:drp:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="DADDR" PHYSICAL="drp_daddr_i"/>
+            <PORTMAP LOGICAL="DEN" PHYSICAL="drp_den_i"/>
+            <PORTMAP LOGICAL="DI" PHYSICAL="drp_di_i"/>
+            <PORTMAP LOGICAL="DO" PHYSICAL="drp_drpdo_o"/>
+            <PORTMAP LOGICAL="DRDY" PHYSICAL="drp_drdy_o"/>
+            <PORTMAP LOGICAL="DWE" PHYSICAL="drp_dwe_i"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>
