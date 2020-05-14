@@ -483,7 +483,7 @@ static inline bool ipv6_eq(ipv6_addr_t a, ipv6_addr_t b)
 
 static inline bool ipv4_is_multicast(ipv4_addr_t a)
 {
-    return a.u8[0] >= 224;
+    return (a.u8[0] >> 4) == 0xe;
 }
 
 static inline bool ipv6_is_multicast(ipv6_addr_t a)
